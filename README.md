@@ -1,25 +1,52 @@
-# 汉语 书平 考试 1 - 6 级 词汇表 数据分析
-# HSK (Chinese Proficiency Exam) 1 - 6 Vocabulary List
-## Objective
-This project aims to help students understand the importance of each initial and character in the HSK vocabulary based on their frequency of appearance. The data for this project is sourced from .xlsx and .csv files downloaded from Purple Culture.
+# 汉语水平考试 (HSK) Levels 1-6: Vocabulary Data Analysis
 
-## Getting Started
-The project begins by importing the necessary libraries, which include **pandas** for data **manipulation** and **matplotlib** and **seaborn** for data visualization.
+## 🎯 Objective
+This project provides a data-driven roadmap for students mastering Chinese. By analyzing the frequency of characters within the HSK 1-6 vocabulary, we identify the core building blocks of the language, allowing for a more strategic and efficient study process.
 
-## Data Preparation
-The data files for each HSK level are read into pandas dataframes and concatenated into a single dataframe. This involves checking if the columns are the same across all files and transforming the data as necessary to ensure compatibility.
+The dataset is compiled from .xlsx and .csv sources provided by **Purple Culture**.
 
-# Data Analysis
-Each word or phrase in the HSK vocabulary is split into individual characters. This allows us to count the frequency of each character. The top two characters, which mean “no” and “son” (though not used to address a son, it is an etymological meaning, it is often used in nouns, for example, table 桌子 and chair 椅子), are both written with three strokes and are the only characters that appear more than fifty times. The remaining characters are also simple characters like heart, air, life, strength, person, and one.
+## 🛠️ Tech Stack & Getting Started
+The analysis is powered by the standard Python data stack:
+*   **Pandas**: For data ingestion, cleaning, and multi-level concatenation.
+*   **Matplotlib & Seaborn**: For high-impact statistical visualizations.
+*   **Custom Font Integration**: A specialized pipeline within the code to handle and render Chinese characters (Hanzi) correctly, bypassing the default limitations of standard visualization libraries.
 
-# Data Visualization
-The frequency of each character is visualized using a bar chart, ordered from the most frequent to the least frequent character. This visualization serves as a helpful guide for students to understand which characters are most important to learn.
+## 📥 Data Preparation
+Data from all six HSK levels were read and validated for structural consistency before being merged into a single comprehensive dataframe. This ensured that character counts and word distributions remained accurate across the entire curriculum.
 
-# Running the Code
-To run the code, you will need to have Python installed along with the necessary libraries. You will also need to download the data files from the **Purple Culture** website and adjust the file paths in the code accordingly. Besides that, matplot and seaborn cannot print Chinese characters. Therefore, it is part of the code to download the font and to apply the **font**.
+# 🔍 Data Analysis: The Building Blocks
+By deconstructing every word and phrase into individual characters, we can pinpoint the most versatile "Hanzi". 
 
-# Contributing
-Contributions are welcome. Please open an issue to discuss what you would like to change or add.
+### Key Findings:
+*   **The Power of Three Strokes**: The two most frequent characters, **“不”** (no) and **“子”** (noun suffix, e.g., 桌子), both consist of only three strokes. They are the only characters appearing more than 50 times in the HSK corpus.
+*   **Simplifying Complexity**: The data reveals that the foundation of Chinese is built upon simple pictograms representing core concepts: heart, air, life, strength, person, and the number one.
 
-# Contact
-If you have any questions or suggestions, please feel free to email me at martinezmauroezequiel@gmail.com.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mauroemartinez/HSK_Vocabulary/main/Top%2025%20Hanzi%20by%20Frequency.jpg" width="800" alt="Top 25 Hanzi by Frequency">
+</p>
+<p align="center">
+  <em>Frequency distribution of top characters across the HSK curriculum.</em>
+</p>
+
+# 📊 Data Visualization: Curriculum Evolution
+We visualize the character frequency using ordered bar charts, providing a clear hierarchy of learning priorities. Additionally, we track how the volume of unique characters and total words scales as the student progresses through the levels.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mauroemartinez/HSK_Vocabulary/main/Unique%20Characters%20and%20Word%20per%20HSK%20Exam%20Level.jpg" width="800" alt="HSK Level Evolution">
+</p>
+<p align="center">
+  <em>Scaling complexity: Unique characters vs. total words per HSK level.</em>
+</p>
+
+# ⚙️ Running the Code
+To replicate this analysis:
+1.  Ensure **Python** and the necessary libraries (`pandas`, `matplotlib`, `seaborn`) are installed.
+2.  Download the raw data from **Purple Culture** and update the local file paths in the script.
+3.  **Crucial**: The script includes a dedicated block to download and apply the correct fonts. Without this step, Chinese characters will not render in the plots.
+
+# 🤝 Contributing
+Contributions that enhance the analytical depth or add new metrics are welcome. Please open an issue to discuss your ideas.
+
+# 📬 Contact
+**Mauro E. Martinez**  
+📧 [martinezmauroezequiel@gmail.com](mailto:martinezmauroezequiel@gmail.com)
